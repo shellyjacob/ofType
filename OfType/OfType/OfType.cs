@@ -27,7 +27,7 @@ namespace OfType
 
         public IEnumerable<TOutput> GetOfType<TSource, TOutput>(IEnumerable<TSource> enumerable)
         {
-            throw new NotImplementedException();
+            return GetOfType<TOutput>(enumerable);
         }
 
         public IEnumerable<TBase> OfBase<TBase, TDerived>(IEnumerable<TDerived> derivedItems) where TDerived : TBase
