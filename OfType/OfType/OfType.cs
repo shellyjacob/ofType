@@ -30,9 +30,10 @@ namespace OfType
             return GetOfType<TOutput>(enumerable);
         }
 
-        public IEnumerable<TBase> OfBase<TBase, TDerived>(IEnumerable<TDerived> derivedItems) where TDerived : TBase
+        public IEnumerable<TBase> OfBase<TBase, TDerived>(IEnumerable<TDerived> derivedItems)
+              where TDerived : TBase
         {
-            throw new NotImplementedException();
+            return GetOfType<TDerived, TBase>(derivedItems);
         }
     }
 }
